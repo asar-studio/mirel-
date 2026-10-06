@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أَثَر — asar</title>
+    <title>Mirel — Women's Fashion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,14 +16,13 @@
 <nav class="navbar">
 
     <div class="logo">
-        <span class="arabic-logo">أَثَر</span>
-        <span class="separator">|</span>
-        <span class="english-logo">asar</span>
+        <span class="english-logo">Mirel</span>
+        <span class="fashion-logo">WOMEN'S FASHION</span>
     </div>
 
     <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#works">Works</a>
+        <a href="#works">Collection</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </div>
@@ -42,78 +41,55 @@
 
 <section class="hero" id="home">
 
-    <h1>أَثَر</h1>
-
-    <p>We create things that leave an أثر.</p>
+  <h1>Mirel</h1>
+<p>WOMEN'S FASHION</p>
+<p>Dress like you mean it.</p>
 
     <button
         type="button"
         class="main-button"
         onclick="document.getElementById('works').scrollIntoView()">
-        Explore Works
+        Explore Collection
     </button>
 
 </section>
 
 
 <!-- =========================
-     WORKS
+     COLLECTION
 ========================= -->
 
 <section class="works" id="works">
 
-    <h2>Our Works</h2>
+    <h2>Our Collection</h2>
 
     <div class="products-grid">
 
-
-        <!-- WORK 1 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 1 -->
+        <div class="product-card" data-product-id="1">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work1.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work1.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">
-                    أَثَر collection
-                </p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(1, this)">
-                        Add to Cart
+                    <button type="button" class="add-cart">
+                        View
                     </button>
-
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 2 FRONT / BACK -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 2 -->
+        <div class="product-card" data-product-id="2">
             <div class="image-container">
 
-                <button
-                    type="button"
-                    class="image-arrow left"
-                    onclick="changeImage(2, -1)">
+                <button type="button" class="image-arrow left" onclick="changeImage(2, -1)">
                     &#10094;
                 </button>
 
@@ -121,193 +97,103 @@
                     id="product-image-2"
                     class="product-image"
                     src="image/work2-front.jpg"
-                    alt="T-Shirt Front">
+                    alt="Mirel Women's Fashion Front">
 
-                <button
-                    type="button"
-                    class="image-arrow right"
-                    onclick="changeImage(2, 1)">
+                <button type="button" class="image-arrow right" onclick="changeImage(2, 1)">
                     &#10095;
                 </button>
 
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">
-                    أَثَر collection
-                </p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(2, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 3 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 3 -->
+        <div class="product-card" data-product-id="3">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work3.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work3.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(3, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 4 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 4 -->
+        <div class="product-card" data-product-id="4">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work4.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work4.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(4, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 5 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 5 -->
+        <div class="product-card" data-product-id="5">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work5.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work5.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(5, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 6 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 6 -->
+        <div class="product-card" data-product-id="6">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work6.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work6.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(6, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 7 FRONT / BACK -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 7 -->
+        <div class="product-card" data-product-id="7">
             <div class="image-container">
 
-                <button
-                    type="button"
-                    class="image-arrow left"
-                    onclick="changeImage(7, -1)">
+                <button type="button" class="image-arrow left" onclick="changeImage(7, -1)">
                     &#10094;
                 </button>
 
@@ -315,86 +201,49 @@
                     id="product-image-7"
                     class="product-image"
                     src="image/work7-front.jpg"
-                    alt="T-Shirt Front">
+                    alt="Mirel Women's Fashion Front">
 
-                <button
-                    type="button"
-                    class="image-arrow right"
-                    onclick="changeImage(7, 1)">
+                <button type="button" class="image-arrow right" onclick="changeImage(7, 1)">
                     &#10095;
                 </button>
 
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(7, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 8 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 8 -->
+        <div class="product-card" data-product-id="8">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work8.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work8.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(8, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 9 FRONT / BACK -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 9 -->
+        <div class="product-card" data-product-id="9">
             <div class="image-container">
 
-                <button
-                    type="button"
-                    class="image-arrow left"
-                    onclick="changeImage(9, -1)">
+                <button type="button" class="image-arrow left" onclick="changeImage(9, -1)">
                     &#10094;
                 </button>
 
@@ -402,86 +251,49 @@
                     id="product-image-9"
                     class="product-image"
                     src="image/work9-front.jpg"
-                    alt="T-Shirt Front">
+                    alt="Mirel Women's Fashion Front">
 
-                <button
-                    type="button"
-                    class="image-arrow right"
-                    onclick="changeImage(9, 1)">
+                <button type="button" class="image-arrow right" onclick="changeImage(9, 1)">
                     &#10095;
                 </button>
 
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(9, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 10 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 10 -->
+        <div class="product-card" data-product-id="10">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work10.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work10.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(10, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 11 FRONT / BACK -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 11 -->
+        <div class="product-card" data-product-id="11">
             <div class="image-container">
 
-                <button
-                    type="button"
-                    class="image-arrow left"
-                    onclick="changeImage(11, -1)">
+                <button type="button" class="image-arrow left" onclick="changeImage(11, -1)">
                     &#10094;
                 </button>
 
@@ -489,86 +301,49 @@
                     id="product-image-11"
                     class="product-image"
                     src="image/work11-front.jpg"
-                    alt="T-Shirt Front">
+                    alt="Mirel Women's Fashion Front">
 
-                <button
-                    type="button"
-                    class="image-arrow right"
-                    onclick="changeImage(11, 1)">
+                <button type="button" class="image-arrow right" onclick="changeImage(11, 1)">
                     &#10095;
                 </button>
 
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(11, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 12 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 12 -->
+        <div class="product-card" data-product-id="12">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work12.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work12.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(12, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 13 FRONT / BACK -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 13 -->
+        <div class="product-card" data-product-id="13">
             <div class="image-container">
 
-                <button
-                    type="button"
-                    class="image-arrow left"
-                    onclick="changeImage(13, -1)">
+                <button type="button" class="image-arrow left" onclick="changeImage(13, -1)">
                     &#10094;
                 </button>
 
@@ -576,156 +351,85 @@
                     id="product-image-13"
                     class="product-image"
                     src="image/work13-front.jpg"
-                    alt="T-Shirt Front">
+                    alt="Mirel Women's Fashion Front">
 
-                <button
-                    type="button"
-                    class="image-arrow right"
-                    onclick="changeImage(13, 1)">
+                <button type="button" class="image-arrow right" onclick="changeImage(13, 1)">
                     &#10095;
                 </button>
 
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(13, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 14 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 14 -->
+        <div class="product-card" data-product-id="14">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work14.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work14.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(14, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 15 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 15 -->
+        <div class="product-card" data-product-id="15">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work15.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work15.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(15, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 16 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 16 -->
+        <div class="product-card" data-product-id="16">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work16.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work16.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(16, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 17 FRONT / BACK -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 17 -->
+        <div class="product-card" data-product-id="17">
             <div class="image-container">
 
-                <button
-                    type="button"
-                    class="image-arrow left"
-                    onclick="changeImage(17, -1)">
+                <button type="button" class="image-arrow left" onclick="changeImage(17, -1)">
                     &#10094;
                 </button>
 
@@ -733,213 +437,113 @@
                     id="product-image-17"
                     class="product-image"
                     src="image/work17-front.jpg"
-                    alt="T-Shirt Front">
+                    alt="Mirel Women's Fashion Front">
 
-                <button
-                    type="button"
-                    class="image-arrow right"
-                    onclick="changeImage(17, 1)">
+                <button type="button" class="image-arrow right" onclick="changeImage(17, 1)">
                     &#10095;
                 </button>
 
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(17, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 18 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 18 -->
+        <div class="product-card" data-product-id="18">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work18.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work18.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(18, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 19 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 19 -->
+        <div class="product-card" data-product-id="19">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work19.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work19.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(19, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 20 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 20 -->
+        <div class="product-card" data-product-id="20">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work20.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work20.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(20, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 21 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 21 -->
+        <div class="product-card" data-product-id="21">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work21.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work21.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(21, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- WORK 22 -->
-
-        <div class="product-card">
-
+        <!-- PRODUCT 22 -->
+        <div class="product-card" data-product-id="22">
             <div class="image-container">
-                <img
-                    class="product-image"
-                    src="image/work22.jpg"
-                    alt="T-Shirt">
+                <img class="product-image" src="image/work22.jpg" alt="Mirel Women's Fashion">
             </div>
 
             <div class="product-info">
-
-                <h3 class="product-name">T-Shirt</h3>
-
-                <p class="product-description">أَثَر collection</p>
+                <h3 class="product-name">Mirel Top</h3>
+                <p class="product-description">Women's collection</p>
 
                 <div class="product-bottom">
-
                     <span class="product-price">$25</span>
-
-                    <button
-                        type="button"
-                        class="add-cart"
-                        onclick="addToCart(22, this)">
-                        Add to Cart
-                    </button>
-
+                    <button type="button" class="add-cart">View</button>
                 </div>
-
             </div>
-
         </div>
 
     </div>
@@ -956,7 +560,7 @@
     <h2>About</h2>
 
     <p>
-        أَثَر is about creating things that leave a lasting أثر.
+        Mirel is about creating women's fashion that leaves a lasting أثر.
     </p>
 
 </section>
@@ -971,7 +575,7 @@
     <h2>Contact</h2>
 
     <p>
-        Get in touch with us.
+        Get in touch with Mirel.
     </p>
 
 </section>
@@ -1007,33 +611,199 @@
 
     </div>
 
-
     <div class="cart-content">
 
-        <div
-            id="cart-items"
-            class="cart-items">
-        </div>
-
+        <div id="cart-items" class="cart-items"></div>
 
         <div class="cart-summary">
 
             <div class="cart-total-row">
-
                 <span>Total</span>
 
                 <span>
                     $<span id="cart-total">0</span>
                 </span>
-
             </div>
-
 
             <button
                 type="button"
                 class="checkout-button"
                 onclick="openCheckout()">
                 Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     PRODUCT OPTIONS
+========================= -->
+
+<div
+    id="product-options-overlay"
+    class="product-options-overlay"
+    onclick="closeProductOptions()">
+</div>
+
+
+<div
+    id="product-options"
+    class="product-options">
+
+    <div class="product-options-box">
+
+        <button
+            type="button"
+            class="options-close"
+            onclick="closeProductOptions()">
+            ×
+        </button>
+
+
+        <div class="options-image-container">
+
+            <img
+                id="options-product-image"
+                src=""
+                alt="Mirel Women's Fashion">
+
+        </div>
+
+
+        <div class="options-details">
+
+            <h2 id="options-product-name">
+                Mirel Top
+            </h2>
+
+            <p class="options-price">
+                $<span id="options-product-price">25</span>
+            </p>
+
+
+            <div class="option-section">
+
+                <h3>Size</h3>
+
+                <div class="size-options">
+
+                    <button
+                        type="button"
+                        class="size-option"
+                        onclick="selectSize('XS')">
+                        XS
+                    </button>
+
+                    <button
+                        type="button"
+                        class="size-option"
+                        onclick="selectSize('S')">
+                        S
+                    </button>
+
+                    <button
+                        type="button"
+                        class="size-option"
+                        onclick="selectSize('M')">
+                        M
+                    </button>
+
+                    <button
+                        type="button"
+                        class="size-option"
+                        onclick="selectSize('L')">
+                        L
+                    </button>
+
+                    <button
+                        type="button"
+                        class="size-option"
+                        onclick="selectSize('XL')">
+                        XL
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="option-section">
+
+                <h3>Color</h3>
+
+                <div class="color-options">
+
+                    <button
+                        type="button"
+                        class="color-option"
+                        data-color="Black"
+                        onclick="selectColor('Black')">
+                        Black
+                    </button>
+
+                    <button
+                        type="button"
+                        class="color-option"
+                        data-color="White"
+                        onclick="selectColor('White')">
+                        White
+                    </button>
+
+                    <button
+                        type="button"
+                        class="color-option"
+                        data-color="Beige"
+                        onclick="selectColor('Beige')">
+                        Beige
+                    </button>
+
+                    <button
+                        type="button"
+                        class="color-option"
+                        data-color="Pink"
+                        onclick="selectColor('Pink')">
+                        Pink
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="option-section">
+
+                <h3>Quantity</h3>
+
+                <div class="options-quantity">
+
+                    <button
+                        type="button"
+                        onclick="changeOptionQuantity(-1)">
+                        −
+                    </button>
+
+                    <span id="options-quantity">1</span>
+
+                    <button
+                        type="button"
+                        onclick="changeOptionQuantity(1)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="confirm-product-button"
+                onclick="confirmProductSelection()">
+                Add to Cart
             </button>
 
         </div>
@@ -1067,9 +837,6 @@
         id="checkout-form"
         onsubmit="placeOrder(event)">
 
-
-        <!-- FULL NAME -->
-
         <div class="form-group">
 
             <label for="full-name">
@@ -1083,8 +850,6 @@
 
         </div>
 
-
-        <!-- PHONE 1 -->
 
         <div class="form-group">
 
@@ -1100,8 +865,6 @@
         </div>
 
 
-        <!-- PHONE 2 -->
-
         <div class="form-group">
 
             <label for="phone2">
@@ -1114,8 +877,6 @@
 
         </div>
 
-
-        <!-- STREET -->
 
         <div class="form-group">
 
@@ -1131,8 +892,6 @@
         </div>
 
 
-        <!-- BUILDING -->
-
         <div class="form-group">
 
             <label for="building">
@@ -1146,8 +905,6 @@
 
         </div>
 
-
-        <!-- FLOOR -->
 
         <div class="form-group">
 
@@ -1163,8 +920,6 @@
         </div>
 
 
-        <!-- APARTMENT -->
-
         <div class="form-group">
 
             <label for="apartment">
@@ -1178,8 +933,6 @@
 
         </div>
 
-
-        <!-- CITY -->
 
         <div class="form-group">
 
@@ -1195,8 +948,6 @@
         </div>
 
 
-        <!-- EXTRA ADDRESS -->
-
         <div class="form-group">
 
             <label for="extra-address">
@@ -1210,17 +961,13 @@
         </div>
 
 
-        <!-- PAYMENT -->
-
         <div class="form-group">
 
             <label>
                 Payment Method
             </label>
 
-
             <div class="payment-options">
-
 
                 <label class="payment-option">
 
@@ -1230,9 +977,7 @@
                         value="Cash on Delivery"
                         required>
 
-                    <span>
-                        Cash on Delivery
-                    </span>
+                    <span>Cash on Delivery</span>
 
                 </label>
 
@@ -1245,9 +990,7 @@
                         value="InstaPay"
                         required>
 
-                    <span>
-                        InstaPay
-                    </span>
+                    <span>InstaPay</span>
 
                 </label>
 
@@ -1260,19 +1003,14 @@
                         value="Visa"
                         required>
 
-                    <span>
-                        Visa
-                    </span>
+                    <span>Visa</span>
 
                 </label>
-
 
             </div>
 
         </div>
 
-
-        <!-- TOTAL -->
 
         <div class="checkout-total">
 
@@ -1285,9 +1023,8 @@
         </div>
 
 
-        <!-- PLACE ORDER -->
-
         <button
+            id="place-order-button"
             type="submit"
             class="place-order-button">
             Place Order
@@ -1304,12 +1041,12 @@
 
 <footer>
 
-    © 2026 أَثَر — asar
+    © 2026 Mirel — Women's Fashion
 
 </footer>
 
 
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 
 </body>
 </html>
