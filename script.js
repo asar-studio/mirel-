@@ -7,8 +7,7 @@
 // GOOGLE APPS SCRIPT
 // ======================================================
 
-const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbz1-O1R1CcxjU1kvyMdpdKjkvaUOxMLoGvv8b3G-DpbXgeWBtrFPHYBENU0r-N-ME4s/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1-O1R1CcxjU1kvyMdpdKjkvaUOxMLoGvv8b3G-DpbXgeWBtrFPHYBENU0rN-ME4s/exec";
 
 
 // ======================================================
