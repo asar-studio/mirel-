@@ -1,1052 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirel — Women's Fashion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbf7f5">
+  <title>Mirel — Women's Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- =========================
-     NAVBAR
-========================= -->
-
-<nav class="navbar">
-
-    <div class="logo">
-        <span class="english-logo">Mirel</span>
-        <span class="fashion-logo">WOMEN'S FASHION</span>
-    </div>
-
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#works">Collection</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <button type="button" class="cart" onclick="openCart()">
-        🛒
-        <span id="cart-count">0</span>
+  <header class="navbar">
+    <a class="logo" href="#home" aria-label="Mirel home">Mirel<span>.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-trigger" type="button" onclick="openCart()" aria-label="Open shopping cart">
+      <span>Bag</span><span class="cart-count" id="cart-count">0</span>
     </button>
-
-</nav>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero" id="home">
-
-  <h1>Mirel</h1>
-<p>WOMEN'S FASHION</p>
-<p>Dress like you mean it.</p>
-
-    <button
-        type="button"
-        class="main-button"
-        onclick="document.getElementById('works').scrollIntoView()">
-        Explore Collection
-    </button>
-
-</section>
-
-
-<!-- =========================
-     COLLECTION
-========================= -->
-
-<section class="works" id="works">
-
-    <h2>Our Collection</h2>
-
-    <div class="products-grid">
-
-        <!-- PRODUCT 1 -->
-        <div class="product-card" data-product-id="1">
-            <div class="image-container">
-                <img class="product-image" src="image/work1.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">
-                        View
-                    </button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 2 -->
-        <div class="product-card" data-product-id="2">
-            <div class="image-container">
-
-                <button type="button" class="image-arrow left" onclick="changeImage(2, -1)">
-                    &#10094;
-                </button>
-
-                <img
-                    id="product-image-2"
-                    class="product-image"
-                    src="image/work2-front.jpg"
-                    alt="Mirel Women's Fashion Front">
-
-                <button type="button" class="image-arrow right" onclick="changeImage(2, 1)">
-                    &#10095;
-                </button>
-
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-        <div class="product-card" data-product-id="3">
-            <div class="image-container">
-                <img class="product-image" src="image/work3.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 4 -->
-        <div class="product-card" data-product-id="4">
-            <div class="image-container">
-                <img class="product-image" src="image/work4.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 5 -->
-        <div class="product-card" data-product-id="5">
-            <div class="image-container">
-                <img class="product-image" src="image/work5.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 6 -->
-        <div class="product-card" data-product-id="6">
-            <div class="image-container">
-                <img class="product-image" src="image/work6.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 7 -->
-        <div class="product-card" data-product-id="7">
-            <div class="image-container">
-
-                <button type="button" class="image-arrow left" onclick="changeImage(7, -1)">
-                    &#10094;
-                </button>
-
-                <img
-                    id="product-image-7"
-                    class="product-image"
-                    src="image/work7-front.jpg"
-                    alt="Mirel Women's Fashion Front">
-
-                <button type="button" class="image-arrow right" onclick="changeImage(7, 1)">
-                    &#10095;
-                </button>
-
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 8 -->
-        <div class="product-card" data-product-id="8">
-            <div class="image-container">
-                <img class="product-image" src="image/work8.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 9 -->
-        <div class="product-card" data-product-id="9">
-            <div class="image-container">
-
-                <button type="button" class="image-arrow left" onclick="changeImage(9, -1)">
-                    &#10094;
-                </button>
-
-                <img
-                    id="product-image-9"
-                    class="product-image"
-                    src="image/work9-front.jpg"
-                    alt="Mirel Women's Fashion Front">
-
-                <button type="button" class="image-arrow right" onclick="changeImage(9, 1)">
-                    &#10095;
-                </button>
-
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 10 -->
-        <div class="product-card" data-product-id="10">
-            <div class="image-container">
-                <img class="product-image" src="image/work10.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 11 -->
-        <div class="product-card" data-product-id="11">
-            <div class="image-container">
-
-                <button type="button" class="image-arrow left" onclick="changeImage(11, -1)">
-                    &#10094;
-                </button>
-
-                <img
-                    id="product-image-11"
-                    class="product-image"
-                    src="image/work11-front.jpg"
-                    alt="Mirel Women's Fashion Front">
-
-                <button type="button" class="image-arrow right" onclick="changeImage(11, 1)">
-                    &#10095;
-                </button>
-
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 12 -->
-        <div class="product-card" data-product-id="12">
-            <div class="image-container">
-                <img class="product-image" src="image/work12.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 13 -->
-        <div class="product-card" data-product-id="13">
-            <div class="image-container">
-
-                <button type="button" class="image-arrow left" onclick="changeImage(13, -1)">
-                    &#10094;
-                </button>
-
-                <img
-                    id="product-image-13"
-                    class="product-image"
-                    src="image/work13-front.jpg"
-                    alt="Mirel Women's Fashion Front">
-
-                <button type="button" class="image-arrow right" onclick="changeImage(13, 1)">
-                    &#10095;
-                </button>
-
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 14 -->
-        <div class="product-card" data-product-id="14">
-            <div class="image-container">
-                <img class="product-image" src="image/work14.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 15 -->
-        <div class="product-card" data-product-id="15">
-            <div class="image-container">
-                <img class="product-image" src="image/work15.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 16 -->
-        <div class="product-card" data-product-id="16">
-            <div class="image-container">
-                <img class="product-image" src="image/work16.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 17 -->
-        <div class="product-card" data-product-id="17">
-            <div class="image-container">
-
-                <button type="button" class="image-arrow left" onclick="changeImage(17, -1)">
-                    &#10094;
-                </button>
-
-                <img
-                    id="product-image-17"
-                    class="product-image"
-                    src="image/work17-front.jpg"
-                    alt="Mirel Women's Fashion Front">
-
-                <button type="button" class="image-arrow right" onclick="changeImage(17, 1)">
-                    &#10095;
-                </button>
-
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 18 -->
-        <div class="product-card" data-product-id="18">
-            <div class="image-container">
-                <img class="product-image" src="image/work18.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 19 -->
-        <div class="product-card" data-product-id="19">
-            <div class="image-container">
-                <img class="product-image" src="image/work19.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 20 -->
-        <div class="product-card" data-product-id="20">
-            <div class="image-container">
-                <img class="product-image" src="image/work20.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 21 -->
-        <div class="product-card" data-product-id="21">
-            <div class="image-container">
-                <img class="product-image" src="image/work21.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 22 -->
-        <div class="product-card" data-product-id="22">
-            <div class="image-container">
-                <img class="product-image" src="image/work22.jpg" alt="Mirel Women's Fashion">
-            </div>
-
-            <div class="product-info">
-                <h3 class="product-name">Mirel Top</h3>
-                <p class="product-description">Women's collection</p>
-
-                <div class="product-bottom">
-                    <span class="product-price">$25</span>
-                    <button type="button" class="add-cart">View</button>
-                </div>
-            </div>
-        </div>
-
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">THE NEW COLLECTION</p>
+        <h1>Dress like<br><em>you mean it.</em></h1>
+        <p class="hero-description">Pieces that feel like you. Discover everyday essentials made to stand out.</p>
+        <a class="primary-button" href="#collection">Shop collection <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-label="Mirel fashion collection">
+        <div class="hero-art-inner"><span>MIREL</span><small>EFFORTLESSLY YOURS</small></div>
+        <div class="hero-sticker">NEW<br>SEASON</div>
+      </div>
+      <div class="hero-bottom-note">WOMENSWEAR · MADE FOR EVERY DAY</div>
+    </section>
+
+    <section class="collection section-wrap" id="collection">
+      <div class="section-heading">
+        <div><p class="eyebrow">FIND YOUR EVERYDAY LOOK</p><h2>The collection</h2></div>
+        <p class="section-subtitle">A little confidence looks good on you.</p>
+      </div>
+      <div class="collection-filters" role="group" aria-label="Filter products">
+        <button class="filter-btn active" type="button" data-filter="all" onclick="filterProducts('all', this)">ALL</button>
+        <button class="filter-btn" type="button" data-filter="pants" onclick="filterProducts('pants', this)">PANTS</button>
+        <button class="filter-btn" type="button" data-filter="zip-shirts" onclick="filterProducts('zip-shirts', this)">ZIP SHIRTS</button>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-mark">M.</div>
+      <div class="about-copy"><p class="eyebrow">A NOTE FROM MIREL</p><h2>Style should feel<br><em>like yourself.</em></h2><p>Mirel is about easy pieces, thoughtful details, and the confidence that comes from wearing something that feels right.</p></div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+      <h2>Let's stay in touch.</h2>
+      <a href="mailto:hello@mirel.com" class="contact-link">hello@mirel.com ↗</a>
+    </section>
+  </main>
+
+  <div class="overlay" id="options-overlay" onclick="closeProductOptions()"></div>
+  <section class="options-modal" id="options-modal" role="dialog" aria-modal="true" aria-labelledby="options-product-name">
+    <button class="modal-close" type="button" onclick="closeProductOptions()" aria-label="Close">×</button>
+    <div class="modal-product-image-wrap"><img id="options-product-image" src="" alt="Selected product"></div>
+    <div class="modal-details">
+      <p class="eyebrow">MIREL COLLECTION</p>
+      <h2 id="options-product-name">Product name</h2>
+      <p class="modal-price" id="options-product-price">$25</p>
+      <div class="option-group"><div class="option-heading"><span>Size</span><span class="option-note">One size</span></div><div class="free-size-label">FREE SIZE</div><p class="option-note" style="line-height:1.7;margin-top:9px">Supplier recommendation: approximately 70–80 kg. Fit may vary.</p></div>
+      <div class="option-group"><div class="option-heading"><span>Color</span><span class="option-note" id="selected-color-label"></span></div><div class="color-options" id="color-options-container"></div></div>
+      <div class="option-group"><div class="option-heading"><span>Quantity</span></div><div class="quantity-control"><button type="button" onclick="changeOptionQuantity(-1)" aria-label="Decrease quantity">−</button><span id="option-quantity">1</span><button type="button" onclick="changeOptionQuantity(1)" aria-label="Increase quantity">+</button></div></div>
+      <button class="primary-button add-button" type="button" onclick="confirmProductSelection()">Add to bag <span>↗</span></button>
     </div>
-
-</section>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section class="about" id="about">
-
-    <h2>About</h2>
-
-    <p>
-        Mirel is about creating women's fashion that leaves a lasting أثر.
-    </p>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-    <h2>Contact</h2>
-
-    <p>
-        Get in touch with Mirel.
-    </p>
-
-</section>
-
-
-<!-- =========================
-     CART OVERLAY
-========================= -->
-
-<div
-    id="cart-overlay"
-    class="cart-overlay"
-    onclick="closeCart()">
-</div>
-
-
-<!-- =========================
-     CART
-========================= -->
-
-<div id="cart-panel" class="cart-panel">
-
-    <div class="cart-header">
-
-        <h2>Your Cart</h2>
-
-        <button
-            type="button"
-            class="close-cart"
-            onclick="closeCart()">
-            ×
-        </button>
-
-    </div>
-
-    <div class="cart-content">
-
-        <div id="cart-items" class="cart-items"></div>
-
-        <div class="cart-summary">
-
-            <div class="cart-total-row">
-                <span>Total</span>
-
-                <span>
-                    $<span id="cart-total">0</span>
-                </span>
-            </div>
-
-            <button
-                type="button"
-                class="checkout-button"
-                onclick="openCheckout()">
-                Checkout
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     PRODUCT OPTIONS
-========================= -->
-
-<div
-    id="product-options-overlay"
-    class="product-options-overlay"
-    onclick="closeProductOptions()">
-</div>
-
-
-<div
-    id="product-options"
-    class="product-options">
-
-    <div class="product-options-box">
-
-        <button
-            type="button"
-            class="options-close"
-            onclick="closeProductOptions()">
-            ×
-        </button>
-
-
-        <div class="options-image-container">
-
-            <img
-                id="options-product-image"
-                src=""
-                alt="Mirel Women's Fashion">
-
-        </div>
-
-
-        <div class="options-details">
-
-            <h2 id="options-product-name">
-                Mirel Top
-            </h2>
-
-            <p class="options-price">
-                $<span id="options-product-price">25</span>
-            </p>
-
-
-            <div class="option-section">
-
-                <h3>Size</h3>
-
-                <div class="size-options">
-
-                    <button
-                        type="button"
-                        class="size-option"
-                        onclick="selectSize('XS')">
-                        XS
-                    </button>
-
-                    <button
-                        type="button"
-                        class="size-option"
-                        onclick="selectSize('S')">
-                        S
-                    </button>
-
-                    <button
-                        type="button"
-                        class="size-option"
-                        onclick="selectSize('M')">
-                        M
-                    </button>
-
-                    <button
-                        type="button"
-                        class="size-option"
-                        onclick="selectSize('L')">
-                        L
-                    </button>
-
-                    <button
-                        type="button"
-                        class="size-option"
-                        onclick="selectSize('XL')">
-                        XL
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <div class="option-section">
-
-                <h3>Color</h3>
-
-                <div class="color-options">
-
-                    <button
-                        type="button"
-                        class="color-option"
-                        data-color="Black"
-                        onclick="selectColor('Black')">
-                        Black
-                    </button>
-
-                    <button
-                        type="button"
-                        class="color-option"
-                        data-color="White"
-                        onclick="selectColor('White')">
-                        White
-                    </button>
-
-                    <button
-                        type="button"
-                        class="color-option"
-                        data-color="Beige"
-                        onclick="selectColor('Beige')">
-                        Beige
-                    </button>
-
-                    <button
-                        type="button"
-                        class="color-option"
-                        data-color="Pink"
-                        onclick="selectColor('Pink')">
-                        Pink
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <div class="option-section">
-
-                <h3>Quantity</h3>
-
-                <div class="options-quantity">
-
-                    <button
-                        type="button"
-                        onclick="changeOptionQuantity(-1)">
-                        −
-                    </button>
-
-                    <span id="options-quantity">1</span>
-
-                    <button
-                        type="button"
-                        onclick="changeOptionQuantity(1)">
-                        +
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <button
-                type="button"
-                class="confirm-product-button"
-                onclick="confirmProductSelection()">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     CHECKOUT
-========================= -->
-
-<div id="checkout-content" class="checkout-content">
-
-    <div class="checkout-header">
-
-        <button
-            type="button"
-            class="back-button"
-            onclick="closeCheckout()">
-            ←
-        </button>
-
-        <h2>Checkout</h2>
-
-    </div>
-
-
-    <form
-        id="checkout-form"
-        onsubmit="placeOrder(event)">
-
-        <div class="form-group">
-
-            <label for="full-name">
-                Full Name
-            </label>
-
-            <input
-                id="full-name"
-                type="text"
-                required>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="phone1">
-                Phone Number
-            </label>
-
-            <input
-                id="phone1"
-                type="tel"
-                required>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="phone2">
-                Second Phone Number
-            </label>
-
-            <input
-                id="phone2"
-                type="tel">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="street">
-                Street
-            </label>
-
-            <input
-                id="street"
-                type="text"
-                required>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="building">
-                Building
-            </label>
-
-            <input
-                id="building"
-                type="text"
-                required>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="floor">
-                Floor
-            </label>
-
-            <input
-                id="floor"
-                type="text"
-                required>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="apartment">
-                Apartment
-            </label>
-
-            <input
-                id="apartment"
-                type="text"
-                required>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="city">
-                City
-            </label>
-
-            <input
-                id="city"
-                type="text"
-                required>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="extra-address">
-                Extra Address Details
-            </label>
-
-            <textarea
-                id="extra-address"
-                placeholder="Optional"></textarea>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label>
-                Payment Method
-            </label>
-
-            <div class="payment-options">
-
-                <label class="payment-option">
-
-                    <input
-                        type="radio"
-                        name="payment"
-                        value="Cash on Delivery"
-                        required>
-
-                    <span>Cash on Delivery</span>
-
-                </label>
-
-
-                <label class="payment-option">
-
-                    <input
-                        type="radio"
-                        name="payment"
-                        value="InstaPay"
-                        required>
-
-                    <span>InstaPay</span>
-
-                </label>
-
-
-                <label class="payment-option">
-
-                    <input
-                        type="radio"
-                        name="payment"
-                        value="Visa"
-                        required>
-
-                    <span>Visa</span>
-
-                </label>
-
-            </div>
-
-        </div>
-
-
-        <div class="checkout-total">
-
-            <span>Total</span>
-
-            <span>
-                $<span id="checkout-total">0</span>
-            </span>
-
-        </div>
-
-
-        <button
-            id="place-order-button"
-            type="submit"
-            class="place-order-button">
-            Place Order
-        </button>
-
+  </section>
+
+  <div class="overlay" id="cart-overlay" onclick="closeCart()"></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Shopping bag">
+    <div class="panel-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag</h2></div><button class="modal-close" type="button" onclick="closeCart()" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"><p class="empty-cart">Your bag is waiting for something lovely.</p></div>
+    <div class="cart-footer"><div class="cart-total-row"><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><button class="primary-button checkout-button" type="button" onclick="openCheckout()">Continue to checkout <span>↗</span></button></div>
+  </aside>
+
+  <div class="overlay" id="checkout-overlay" onclick="closeCheckout()"></div>
+  <section class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <button class="modal-close" type="button" onclick="closeCheckout()" aria-label="Close checkout">×</button>
+    <p class="eyebrow">ALMOST YOURS</p><h2 id="checkout-title">Checkout</h2>
+    <form id="checkout-form" onsubmit="placeOrder(event)">
+      <div class="form-grid">
+        <label>Full name<input name="name" type="text" autocomplete="name" required></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Second phone <span class="optional">(optional)</span><input name="secondPhone" type="tel"></label>
+        <label>City<input name="city" type="text" required></label>
+        <label>Street<input name="street" type="text" required></label>
+        <label>Building<input name="building" type="text" required></label>
+        <label>Floor<input name="floor" type="text"></label>
+        <label>Apartment<input name="apartment" type="text"></label>
+        <label class="full-field">Extra address details <span class="optional">(optional)</span><textarea name="extraAddress" rows="2"></textarea></label>
+        <label class="full-field">Payment method<select name="payment" required><option value="" disabled selected>Choose payment method</option><option value="Cash on Delivery">Cash on Delivery</option></select></label>
+      </div>
+      <div class="checkout-total"><span>Order total</span><strong id="checkout-total">$0.00</strong></div>
+      <button class="primary-button checkout-submit" id="place-order-button" type="submit">Place order <span>↗</span></button>
     </form>
+  </section>
 
-</div>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    © 2026 Mirel — Women's Fashion
-
-</footer>
-
-
-<script src="script.js?v=3"></script>
-
+  <div class="toast" id="toast" role="status"></div>
+  <footer class="footer"><a class="logo" href="#home">Mirel<span>.</span></a><p>Dress like you mean it.</p><small>© 2026 Mirel. All rights reserved.</small></footer>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
