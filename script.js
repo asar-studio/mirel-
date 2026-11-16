@@ -9,7 +9,7 @@ const products = [
   {id:2, model:"Scarf Pants", category:"pants", color:"Green", image:"image/pants7-green.jpg", price:25},
   {id:3, model:"Scarf Pants", category:"pants", color:"Grey", image:"image/pants8-grey.jpg", price:25},
   {id:4, model:"Scarf Pants", category:"pants", color:"Black", image:"image/pants4-black.jpg", price:25},
-  {id:5, model:"Scarf Pants", category:"pants", color:"Burgundy", image:"image/pants18-red.jpg", price:25},
+  {id:5, model:"Scarf Pants", category:"pants", color:"Burgundy", image:"image/pants18-burgundy.jpg", price:25},
 
   // Sweetpants
   {id:6, model:"Sweetpants", category:"pants", color:"Grey", image:"image/pants1-grey.jpg", price:25},
