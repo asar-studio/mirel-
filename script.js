@@ -45,17 +45,29 @@ let selectedProductId = null;
 let selectedOptionQuantity = 1;
 let toastTimer = null;
 let orderSubmitting = false;
-
-const money = amount => ${CURRENCY}${Number(amount || 0).toFixed(2)};
+const money = amount => `${CURRENCY}${Number(amount || 0).toFixed(2)}`;
 const getProduct = id => products.find(product => product.id === Number(id));
 const getModelProducts = model => products.filter(product => product.model === model);
 
 function renderProducts(category = "all") {
 const grid = document.getElementById("product-grid");
 if (!grid) return;
-const visible = category === "all" ? products : products.filter(product => product.category === category);
-grid.innerHTML = visible.map(product =>    <article class="product-card" data-product-id="${product.id}" data-category="${product.category}" tabindex="0" role="button" aria-label="View ${product.model}, ${product.color}" onclick="openProductOptions(${product.id})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProductOptions(${product.id})}">   <div class="product-image-wrap">   <img class="product-image" src="${product.image}" alt="${product.model} - ${product.color}" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x800/f1e9e7/9c5369?text=Mirel';">   <span class="product-tag">${product.category === "pants" ? "PANTS" : "ZIP SHIRT"}</span>   </div>   <div class="product-info">   <div><h3>${product.model}</h3><span class="product-category">${product.color.toUpperCase()} · FREE SIZE</span></div>   <span class="product-price">${money(product.price)}</span>   </div>   <button class="product-open" type="button" onclick="event.stopPropagation();openProductOptions(${product.id})">VIEW PRODUCT</button>   </article>).join("");
-}
+grid.innerHTML = visible.map(product => `
+  <article class="product-card" data-product-id="${product.id}" data-category="${product.category}" tabindex="0" role="button" aria-label="View ${product.model}, ${product.color}" onclick="openProductOptions(${product.id})">
+    <div class="product-image-wrap">
+      <img class="product-image" src="${product.image}" alt="${product.model} - ${product.color}" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x800/f1e9e7/9c5369?text=Mirel';">
+      <span class="product-tag">${product.category === "pants" ? "PANTS" : "ZIP SHIRT"}</span>
+    </div>
+    <div class="product-info">
+      <div>
+        <h3>${product.model}</h3>
+        <span class="product-category">${product.color.toUpperCase()} · FREE SIZE</span>
+      </div>
+      <span class="product-price">${money(product.price)}</span>
+    </div>
+    <button class="product-open" type="button" onclick="event.stopPropagation();openProductOptions(${product.id})">VIEW PRODUCT</button>
+  </article>
+`).join("");
 
 function filterProducts(category, button) {
 document.querySelectorAll(".filter-btn").forEach(item => item.classList.toggle("active", item === button));
