@@ -91,18 +91,56 @@
     <button class="modal-close" type="button" onclick="closeCheckout()" aria-label="Close checkout">×</button>
     <p class="eyebrow">ALMOST YOURS</p><h2 id="checkout-title">Checkout</h2>
     <form id="checkout-form" onsubmit="placeOrder(event)">
-      <div class="form-grid">
-        <label>Full name<input name="name" type="text" autocomplete="name" required></label>
-        <label>Phone number<input name="phone" type="tel" autocomplete="tel" required></label>
-        <label>Second phone <span class="optional">(optional)</span><input name="secondPhone" type="tel"></label>
-        <label>City<input name="city" type="text" required></label>
-        <label>Street<input name="street" type="text" required></label>
-        <label>Building<input name="building" type="text" required></label>
-        <label>Floor<input name="floor" type="text"></label>
-        <label>Apartment<input name="apartment" type="text"></label>
-        <label class="full-field">Extra address details <span class="optional">(optional)</span><textarea name="extraAddress" rows="2"></textarea></label>
-        <label class="full-field">Payment method<select name="payment" required><option value="" disabled selected>Choose payment method</option><option value="Cash on Delivery">Cash on Delivery</option></select></label>
-      </div>
+    <div class="form-grid">
+  <label>
+    Full Name — الاسم بالكامل
+    <input name="name" type="text" autocomplete="name" required>
+  </label>
+
+  <label>
+    Phone Number — رقم الهاتف
+    <input name="phone" type="tel" autocomplete="tel" required>
+  </label>
+
+  <label>
+    Second Phone — رقم ثاني (اختياري)
+    <input name="secondPhone" type="tel">
+  </label>
+
+  <label>
+    City — المدينة
+    <input name="city" type="text" required>
+  </label>
+
+  <label>
+    Building — العمارة
+    <input name="building" type="text" required>
+  </label>
+
+  <label>
+    Floor — الدور
+    <input name="floor" type="text">
+  </label>
+
+  <label>
+    Apartment — رقم الشقة
+    <input name="apartment" type="text">
+  </label>
+
+  <label class="full-field">
+    Extra Address Details — تفاصيل العنوان الإضافية (اختياري)
+    <textarea name="extraAddress" rows="2"></textarea>
+  </label>
+
+  <label class="full-field">
+    Payment Method — طريقة الدفع
+    <select name="payment" required>
+      <option value="" disabled selected>Choose payment method — اختر طريقة الدفع</option>
+      <option value="Cash on Delivery">Cash on Delivery — الدفع عند الاستلام</option>
+      <option value="InstaPay">InstaPay — إنستا باي</option>
+    </select>
+  </label>
+</div>
       <div class="checkout-total"><span>Order total</span><strong id="checkout-total">$0.00</strong></div>
       <button class="primary-button checkout-submit" id="place-order-button" type="submit">Place order <span>↗</span></button>
     </form>
