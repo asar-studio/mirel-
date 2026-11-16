@@ -1,42 +1,41 @@
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1-O1R1CcxjU1kvyMdpdKjkvaUOxMLoGvv8b3G-DpbXgeWBtrFPHYBENU0r-N-ME4s/exec";
-
 const CURRENCY = "$";
 const FREE_SIZE_NOTE = "Supplier recommendation: approximately 70–80 kg. Fit may vary.";
 
+// =========================
+// PRODUCTS
+// =========================
+
 const products = [
-  // Scarf Pants
-  {id:1, model:"Scarf Pants", category:"pants", color:"Brown", image:"image/pants2-brown.jpg", price:25},
-  {id:2, model:"Scarf Pants", category:"pants", color:"Green", image:"image/pants7-green.jpg", price:25},
-  {id:3, model:"Scarf Pants", category:"pants", color:"Grey", image:"image/pants8-grey.jpg", price:25},
-  {id:4, model:"Scarf Pants", category:"pants", color:"Black", image:"image/pants4-black.jpg", price:25},
-  {id:5, model:"Scarf Pants", category:"pants", color:"Burgundy", image:"image/pants18-burgundy.jpg", price:25},
+  {id:1,model:"Scarf Pants",category:"pants",color:"Brown",image:"image/pants2-brown.jpg",price:25},
+  {id:2,model:"Scarf Pants",category:"pants",color:"Green",image:"image/pants7-green.jpg",price:25},
+  {id:3,model:"Scarf Pants",category:"pants",color:"Grey",image:"image/pants8-grey.jpg",price:25},
+  {id:4,model:"Scarf Pants",category:"pants",color:"Black",image:"image/pants4-black.jpg",price:25},
+  {id:5,model:"Scarf Pants",category:"pants",color:"Burgundy",image:"image/pants18-burgundy.jpg",price:25},
 
-  // Sweetpants
-  {id:6, model:"Sweetpants", category:"pants", color:"Grey", image:"image/pants1-grey.jpg", price:25},
-  {id:7, model:"Sweetpants", category:"pants", color:"Green", image:"image/pants3-green.jpg", price:25},
-  {id:8, model:"Sweetpants", category:"pants", color:"Black", image:"image/pants6-black.jpg", price:25},
-  {id:9, model:"Sweetpants", category:"pants", color:"Burgundy", image:"image/pants9-burgundy.jpg", price:25},
-  {id:10, model:"Sweetpants", category:"pants", color:"Brown", image:"image/pants10-brown.jpg", price:25},
+  {id:6,model:"Sweetpants",category:"pants",color:"Grey",image:"image/pants1-grey.jpg",price:25},
+  {id:7,model:"Sweetpants",category:"pants",color:"Green",image:"image/pants3-green.jpg",price:25},
+  {id:8,model:"Sweetpants",category:"pants",color:"Black",image:"image/pants6-black.jpg",price:25},
+  {id:9,model:"Sweetpants",category:"pants",color:"Burgundy",image:"image/pants9-burgundy.jpg",price:25},
+  {id:10,model:"Sweetpants",category:"pants",color:"Brown",image:"image/pants10-brown.jpg",price:25},
 
-  // Cammer Pants
-  {id:11, model:"Cammer Pants", category:"pants", color:"Black", image:"image/pants5-black.jpg", price:25},
-  {id:12, model:"Cammer Pants", category:"pants", color:"Green", image:"image/pants11-green.jpg", price:25},
-  {id:13, model:"Cammer Pants", category:"pants", color:"Dark Blue", image:"image/pants12-dark_blue.jpg", price:25},
-  {id:14, model:"Cammer Pants", category:"pants", color:"Grey", image:"image/pants13-grey.jpg", price:25},
-  {id:15, model:"Cammer Pants", category:"pants", color:"Off White", image:"image/pants14-off_white.jpg", price:25},
-  {id:16, model:"Cammer Pants", category:"pants", color:"Beige", image:"image/pants15-beige.jpg", price:25},
-  {id:17, model:"Cammer Pants", category:"pants", color:"Brown", image:"image/pants16-brown.jpg", price:25},
-  {id:18, model:"Cammer Pants", category:"pants", color:"Burgundy", image:"image/pants17-burgundy.jpg", price:25},
+  {id:11,model:"Cammer Pants",category:"pants",color:"Black",image:"image/pants5-black.jpg",price:25},
+  {id:12,model:"Cammer Pants",category:"pants",color:"Green",image:"image/pants11-green.jpg",price:25},
+  {id:13,model:"Cammer Pants",category:"pants",color:"Dark Blue",image:"image/pants12-dark_blue.jpg",price:25},
+  {id:14,model:"Cammer Pants",category:"pants",color:"Grey",image:"image/pants13-grey.jpg",price:25},
+  {id:15,model:"Cammer Pants",category:"pants",color:"Off White",image:"image/pants14-off_white.jpg",price:25},
+  {id:16,model:"Cammer Pants",category:"pants",color:"Beige",image:"image/pants15-beige.jpg",price:25},
+  {id:17,model:"Cammer Pants",category:"pants",color:"Brown",image:"image/pants16-brown.jpg",price:25},
+  {id:18,model:"Cammer Pants",category:"pants",color:"Burgundy",image:"image/pants17-burgundy.jpg",price:25},
 
-  // Zip Shirt
-  {id:19, model:"Zip Shirt", category:"zip-shirts", color:"Brown", image:"image/zip-shirt1-brown.jpg", price:25},
-  {id:20, model:"Zip Shirt", category:"zip-shirts", color:"Grey", image:"image/zip-shirt2-grey.jpg", price:25, alternateImage:"image/zip-shirt6-grey.jpg"},
-  {id:21, model:"Zip Shirt", category:"zip-shirts", color:"Burgundy", image:"image/zip-shirt3-burgundy.jpg", price:25},
-  {id:22, model:"Zip Shirt", category:"zip-shirts", color:"Off White", image:"image/zip-shirt4-off_white.jpg", price:25},
-  {id:23, model:"Zip Shirt", category:"zip-shirts", color:"Green", image:"image/zip-shirt5-green.jpg", price:25},
-  {id:24, model:"Zip Shirt", category:"zip-shirts", color:"Black", image:"image/zip-shirt7-black.jpg", price:25},
-  {id:25, model:"Zip Shirt", category:"zip-shirts", color:"Red", image:"image/zip-shirt8-red.jpg", price:25},
-  {id:26, model:"Zip Shirt", category:"zip-shirts", color:"Beige", image:"image/zip-shirt9-beige.jpg", price:25}
+  {id:19,model:"Zip Shirt",category:"zip-shirts",color:"Brown",image:"image/zip-shirt1-brown.jpg",price:25},
+  {id:20,model:"Zip Shirt",category:"zip-shirts",color:"Grey",image:"image/zip-shirt2-grey.jpg",price:25,alternateImage:"image/zip-shirt6-grey.jpg"},
+  {id:21,model:"Zip Shirt",category:"zip-shirts",color:"Burgundy",image:"image/zip-shirt3-burgundy.jpg",price:25},
+  {id:22,model:"Zip Shirt",category:"zip-shirts",color:"Off White",image:"image/zip-shirt4-off_white.jpg",price:25},
+  {id:23,model:"Zip Shirt",category:"zip-shirts",color:"Green",image:"image/zip-shirt5-green.jpg",price:25},
+  {id:24,model:"Zip Shirt",category:"zip-shirts",color:"Black",image:"image/zip-shirt7-black.jpg",price:25},
+  {id:25,model:"Zip Shirt",category:"zip-shirts",color:"Red",image:"image/zip-shirt8-red.jpg",price:25},
+  {id:26,model:"Zip Shirt",category:"zip-shirts",color:"Beige",image:"image/zip-shirt9-beige.jpg",price:25}
 ];
 
 let cart = [];
@@ -45,14 +44,9 @@ let selectedOptionQuantity = 1;
 let toastTimer = null;
 let orderSubmitting = false;
 
-const money = amount =>
-  `${CURRENCY}${Number(amount || 0).toFixed(2)}`;
-
-const getProduct = id =>
-  products.find(product => product.id === Number(id));
-
-const getModelProducts = model =>
-  products.filter(product => product.model === model);
+const money = amount => `${CURRENCY}${Number(amount || 0).toFixed(2)}`;
+const getProduct = id => products.find(p => p.id === Number(id));
+const getModelProducts = model => products.filter(p => p.model === model);
 
 
 // =========================
@@ -65,26 +59,21 @@ function renderProducts(category = "all") {
 
   const visible = category === "all"
     ? products
-    : products.filter(product => product.category === category);
+    : products.filter(p => p.category === category);
 
   grid.innerHTML = visible.map(product => `
-    <article
-      class="product-card"
+    <article class="product-card"
       data-product-id="${product.id}"
       data-category="${product.category}"
-      tabindex="0"
-      role="button"
-      aria-label="View ${product.model}, ${product.color}"
-      onclick="openProductOptions(${product.id})"
-    >
+      onclick="openProductOptions(${product.id})">
+
       <div class="product-image-wrap">
-        <img
-          class="product-image"
+        <img class="product-image"
           src="${product.image}"
           alt="${product.model} - ${product.color}"
           loading="lazy"
-          onerror="this.onerror=null;this.src='https://placehold.co/600x800/f1e9e7/9c5369?text=Mirel';"
-        >
+          onerror="this.onerror=null;this.src='https://placehold.co/600x800/f1e9e7/9c5369?text=Mirel';">
+
         <span class="product-tag">
           ${product.category === "pants" ? "PANTS" : "ZIP SHIRT"}
         </span>
@@ -93,18 +82,13 @@ function renderProducts(category = "all") {
       <div class="product-info">
         <div>
           <h3>${product.model}</h3>
-          <span class="product-category">
-            ${product.color.toUpperCase()} · FREE SIZE
-          </span>
+          <span class="product-category">${product.color.toUpperCase()} · FREE SIZE</span>
         </div>
         <span class="product-price">${money(product.price)}</span>
       </div>
 
-      <button
-        class="product-open"
-        type="button"
-        onclick="event.stopPropagation();openProductOptions(${product.id})"
-      >
+      <button class="product-open" type="button"
+        onclick="event.stopPropagation();openProductOptions(${product.id})">
         VIEW PRODUCT
       </button>
     </article>
@@ -113,20 +97,19 @@ function renderProducts(category = "all") {
 
 
 // =========================
-// FILTER PRODUCTS
+// FILTERS
 // =========================
 
 function filterProducts(category, button) {
   document.querySelectorAll(".filter-btn").forEach(item => {
     item.classList.toggle("active", item === button);
   });
-
   renderProducts(category);
 }
 
 
 // =========================
-// PRODUCT OPTIONS MODAL
+// PRODUCT MODAL
 // =========================
 
 function openProductOptions(productId) {
@@ -143,10 +126,8 @@ function openProductOptions(productId) {
 
   document.getElementById("options-overlay").classList.add("show");
   document.getElementById("options-modal").classList.add("show");
-
   updateBodyScroll();
 }
-
 
 function updateProductModal(product) {
   const image = document.getElementById("options-product-image");
@@ -154,7 +135,6 @@ function updateProductModal(product) {
   if (image) {
     image.src = product.image;
     image.alt = `${product.model} - ${product.color}`;
-
     image.onerror = function () {
       this.onerror = null;
       this.src = product.alternateImage ||
@@ -169,18 +149,15 @@ function updateProductModal(product) {
   const colorContainer = document.getElementById("color-options-container");
 
   colorContainer.innerHTML = getModelProducts(product.model).map(variant => `
-    <button
-      type="button"
+    <button type="button"
       class="color-option ${variant.id === product.id ? "selected" : ""}"
       data-color="${variant.color}"
       aria-pressed="${variant.id === product.id}"
-      onclick="selectColor(${variant.id})"
-    >
+      onclick="selectColor(${variant.id})">
       ${variant.color}
     </button>
   `).join("");
 }
-
 
 function closeProductOptions() {
   const overlay = document.getElementById("options-overlay");
@@ -193,7 +170,6 @@ function closeProductOptions() {
   updateBodyScroll();
 }
 
-
 function selectColor(productId) {
   const product = getProduct(productId);
   if (!product || !selectedProductId) return;
@@ -205,11 +181,6 @@ function selectColor(productId) {
   updateProductModal(product);
 }
 
-
-// =========================
-// PRODUCT QUANTITY
-// =========================
-
 function changeOptionQuantity(change) {
   selectedOptionQuantity = Math.max(
     1,
@@ -219,7 +190,6 @@ function changeOptionQuantity(change) {
   document.getElementById("option-quantity").textContent =
     String(selectedOptionQuantity);
 }
-
 
 function confirmProductSelection() {
   const product = getProduct(selectedProductId);
@@ -258,7 +228,6 @@ function addToCart(product, quantity = 1) {
   updateCart();
 }
 
-
 function saveCart() {
   try {
     localStorage.setItem("mirelCart", JSON.stringify(cart));
@@ -267,13 +236,9 @@ function saveCart() {
   }
 }
 
-
 function loadCart() {
   try {
-    const saved = JSON.parse(
-      localStorage.getItem("mirelCart") || "[]"
-    );
-
+    const saved = JSON.parse(localStorage.getItem("mirelCart") || "[]");
     if (!Array.isArray(saved)) return;
 
     cart = saved.map(item => {
@@ -292,20 +257,17 @@ function loadCart() {
         quantity: Math.max(1, Number(item.quantity) || 1)
       };
     }).filter(Boolean);
-
   } catch (error) {
     cart = [];
     console.warn("Could not load cart:", error);
   }
 }
 
-
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== Number(productId));
   saveCart();
   updateCart();
 }
-
 
 function changeQuantity(productId, change) {
   const item = cart.find(entry => entry.id === Number(productId));
@@ -314,7 +276,8 @@ function changeQuantity(productId, change) {
   item.quantity += Number(change);
 
   if (item.quantity <= 0) {
-    return removeFromCart(productId);
+    removeFromCart(productId);
+    return;
   }
 
   saveCart();
@@ -375,9 +338,7 @@ function updateCart() {
       minus.type = "button";
       minus.textContent = "−";
       minus.setAttribute("aria-label", "Decrease quantity");
-      minus.addEventListener("click", () =>
-        changeQuantity(item.id, -1)
-      );
+      minus.addEventListener("click", () => changeQuantity(item.id, -1));
 
       const qty = document.createElement("span");
       qty.textContent = String(item.quantity);
@@ -386,9 +347,7 @@ function updateCart() {
       plus.type = "button";
       plus.textContent = "+";
       plus.setAttribute("aria-label", "Increase quantity");
-      plus.addEventListener("click", () =>
-        changeQuantity(item.id, 1)
-      );
+      plus.addEventListener("click", () => changeQuantity(item.id, 1));
 
       actions.append(minus, qty, plus);
 
@@ -396,9 +355,7 @@ function updateCart() {
       remove.type = "button";
       remove.className = "remove-item";
       remove.textContent = "Remove";
-      remove.addEventListener("click", () =>
-        removeFromCart(item.id)
-      );
+      remove.addEventListener("click", () => removeFromCart(item.id));
 
       info.append(heading, meta, price, actions, remove);
       row.append(img, info);
@@ -423,16 +380,13 @@ function updateCart() {
 function openCart() {
   document.getElementById("cart-overlay").classList.add("show");
   document.getElementById("cart-panel").classList.add("show");
-
   updateCart();
   updateBodyScroll();
 }
 
-
 function closeCart() {
   document.getElementById("cart-overlay").classList.remove("show");
   document.getElementById("cart-panel").classList.remove("show");
-
   updateBodyScroll();
 }
 
@@ -455,7 +409,6 @@ function openCheckout() {
   updateCart();
   updateBodyScroll();
 }
-
 
 function closeCheckout() {
   document.getElementById("checkout-overlay").classList.remove("show");
@@ -526,7 +479,6 @@ async function placeOrder(event) {
   }
 
   const form = document.getElementById("checkout-form");
-
   if (!form || !form.reportValidity()) return;
 
   const data = new FormData(form);
@@ -573,7 +525,6 @@ async function placeOrder(event) {
   orderSubmitting = true;
 
   const button = document.getElementById("place-order-button");
-
   button.disabled = true;
   button.textContent = "Sending order...";
 
@@ -592,11 +543,9 @@ async function placeOrder(event) {
     closeCheckout();
 
     showToast("Order request sent. We'll contact you soon ♡");
-
   } catch (error) {
     console.error("Order request error:", error);
     showToast("Could not send the order. Please try again.");
-
   } finally {
     orderSubmitting = false;
     resetPlaceOrderButton();
@@ -605,7 +554,7 @@ async function placeOrder(event) {
 
 
 // =========================
-// KEYBOARD EVENTS
+// KEYBOARD
 // =========================
 
 document.addEventListener("keydown", event => {
@@ -618,7 +567,7 @@ document.addEventListener("keydown", event => {
 
 
 // =========================
-// INITIALIZE WEBSITE
+// INITIALIZE
 // =========================
 
 document.addEventListener("DOMContentLoaded", () => {
