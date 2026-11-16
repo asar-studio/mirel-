@@ -2,40 +2,36 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1-O1R1CcxjU1kvyMdp
 const CURRENCY = "$";
 const FREE_SIZE_NOTE = "Supplier recommendation: approximately 70–80 kg. Fit may vary.";
 
-// =========================
-// PRODUCTS
-// =========================
-
 const products = [
-  {id:1,model:"Scarf Pants",category:"pants",color:"Brown",image:"image/pants2-brown.jpg",price:25},
-  {id:2,model:"Scarf Pants",category:"pants",color:"Green",image:"image/pants7-green.jpg",price:25},
-  {id:3,model:"Scarf Pants",category:"pants",color:"Grey",image:"image/pants8-grey.jpg",price:25},
-  {id:4,model:"Scarf Pants",category:"pants",color:"Black",image:"image/pants4-black.jpg",price:25},
-  {id:5,model:"Scarf Pants",category:"pants",color:"Burgundy",image:"image/pants18-burgundy.jpg",price:25},
+{id:1,model:"Scarf Pants",category:"pants",color:"Brown",image:"image/pants2-brown.jpg",price:25},
+{id:2,model:"Scarf Pants",category:"pants",color:"Green",image:"image/pants7-green.jpg",price:25},
+{id:3,model:"Scarf Pants",category:"pants",color:"Grey",image:"image/pants8-grey.jpg",price:25},
+{id:4,model:"Scarf Pants",category:"pants",color:"Black",image:"image/pants4-black.jpg",price:25},
+{id:5,model:"Scarf Pants",category:"pants",color:"Burgundy",image:"image/pants18-burgundy.jpg",price:25},
 
-  {id:6,model:"Sweetpants",category:"pants",color:"Grey",image:"image/pants1-grey.jpg",price:25},
-  {id:7,model:"Sweetpants",category:"pants",color:"Green",image:"image/pants3-green.jpg",price:25},
-  {id:8,model:"Sweetpants",category:"pants",color:"Black",image:"image/pants6-black.jpg",price:25},
-  {id:9,model:"Sweetpants",category:"pants",color:"Burgundy",image:"image/pants9-burgundy.jpg",price:25},
-  {id:10,model:"Sweetpants",category:"pants",color:"Brown",image:"image/pants10-brown.jpg",price:25},
+{id:6,model:"Sweetpants",category:"pants",color:"Grey",image:"image/pants1-grey.jpg",price:25},
+{id:7,model:"Sweetpants",category:"pants",color:"Green",image:"image/pants3-green.jpg",price:25},
+{id:8,model:"Sweetpants",category:"pants",color:"Black",image:"image/pants6-black.jpg",price:25},
+{id:9,model:"Sweetpants",category:"pants",color:"Burgundy",image:"image/pants9-burgundy.jpg",price:25},
+{id:10,model:"Sweetpants",category:"pants",color:"Brown",image:"image/pants10-brown.jpg",price:25},
 
-  {id:11,model:"Cammer Pants",category:"pants",color:"Black",image:"image/pants5-black.jpg",price:25},
-  {id:12,model:"Cammer Pants",category:"pants",color:"Green",image:"image/pants11-green.jpg",price:25},
-  {id:13,model:"Cammer Pants",category:"pants",color:"Dark Blue",image:"image/pants12-dark_blue.jpg",price:25},
-  {id:14,model:"Cammer Pants",category:"pants",color:"Grey",image:"image/pants13-grey.jpg",price:25},
-  {id:15,model:"Cammer Pants",category:"pants",color:"Off White",image:"image/pants14-off_white.jpg",price:25},
-  {id:16,model:"Cammer Pants",category:"pants",color:"Beige",image:"image/pants15-beige.jpg",price:25},
-  {id:17,model:"Cammer Pants",category:"pants",color:"Brown",image:"image/pants16-brown.jpg",price:25},
-  {id:18,model:"Cammer Pants",category:"pants",color:"Burgundy",image:"image/pants17-burgundy.jpg",price:25},
+{id:11,model:"Cammer Pants",category:"pants",color:"Black",image:"image/pants5-black.jpg",price:25},
+{id:12,model:"Cammer Pants",category:"pants",color:"Green",image:"image/pants11-green.jpg",price:25},
+{id:13,model:"Cammer Pants",category:"pants",color:"Dark Blue",image:"image/pants12-dark_blue.jpg",price:25},
+{id:14,model:"Cammer Pants",category:"pants",color:"Grey",image:"image/pants13-grey.jpg",price:25},
+{id:15,model:"Cammer Pants",category:"pants",color:"Off White",image:"image/pants14-off_white.jpg",price:25},
+{id:16,model:"Cammer Pants",category:"pants",color:"Beige",image:"image/pants15-beige.jpg",price:25},
+{id:17,model:"Cammer Pants",category:"pants",color:"Brown",image:"image/pants16-brown.jpg",price:25},
+{id:18,model:"Cammer Pants",category:"pants",color:"Burgundy",image:"image/pants17-burgundy.jpg",price:25},
 
-  {id:19,model:"Zip Shirt",category:"zip-shirts",color:"Brown",image:"image/zip-shirt1-brown.jpg",price:25},
-  {id:20,model:"Zip Shirt",category:"zip-shirts",color:"Grey",image:"image/zip-shirt2-grey.jpg",price:25,alternateImage:"image/zip-shirt6-grey.jpg"},
-  {id:21,model:"Zip Shirt",category:"zip-shirts",color:"Burgundy",image:"image/zip-shirt3-burgundy.jpg",price:25},
-  {id:22,model:"Zip Shirt",category:"zip-shirts",color:"Off White",image:"image/zip-shirt4-off_white.jpg",price:25},
-  {id:23,model:"Zip Shirt",category:"zip-shirts",color:"Green",image:"image/zip-shirt5-green.jpg",price:25},
-  {id:24,model:"Zip Shirt",category:"zip-shirts",color:"Black",image:"image/zip-shirt7-black.jpg",price:25},
-  {id:25,model:"Zip Shirt",category:"zip-shirts",color:"Red",image:"image/zip-shirt8-red.jpg",price:25},
-  {id:26,model:"Zip Shirt",category:"zip-shirts",color:"Beige",image:"image/zip-shirt9-beige.jpg",price:25}
+{id:19,model:"Zip Shirt",category:"zip-shirts",color:"Brown",image:"image/zip-shirt1-brown.jpg",price:25},
+{id:20,model:"Zip Shirt",category:"zip-shirts",color:"Grey",image:"image/zip-shirt2-grey.jpg",price:25,alternateImage:"image/zip-shirt6-grey.jpg"},
+{id:21,model:"Zip Shirt",category:"zip-shirts",color:"Burgundy",image:"image/zip-shirt3-burgundy.jpg",price:25},
+{id:22,model:"Zip Shirt",category:"zip-shirts",color:"Off White",image:"image/zip-shirt4-off_white.jpg",price:25},
+{id:23,model:"Zip Shirt",category:"zip-shirts",color:"Green",image:"image/zip-shirt5-green.jpg",price:25},
+{id:24,model:"Zip Shirt",category:"zip-shirts",color:"Black",image:"image/zip-shirt7-black.jpg",price:25},
+{id:25,model:"Zip Shirt",category:"zip-shirts",color:"Red",image:"image/zip-shirt8-red.jpg",price:25},
+{id:26,model:"Zip Shirt",category:"zip-shirts",color:"Beige",image:"image/zip-shirt9-beige.jpg",price:25}
 ];
 
 let cart = [];
@@ -47,7 +43,6 @@ let orderSubmitting = false;
 const money = amount => `${CURRENCY}${Number(amount || 0).toFixed(2)}`;
 const getProduct = id => products.find(p => p.id === Number(id));
 const getModelProducts = model => products.filter(p => p.model === model);
-
 
 // =========================
 // RENDER PRODUCTS
@@ -95,7 +90,6 @@ function renderProducts(category = "all") {
   `).join("");
 }
 
-
 // =========================
 // FILTERS
 // =========================
@@ -106,7 +100,6 @@ function filterProducts(category, button) {
   });
   renderProducts(category);
 }
-
 
 // =========================
 // PRODUCT MODAL
@@ -135,6 +128,7 @@ function updateProductModal(product) {
   if (image) {
     image.src = product.image;
     image.alt = `${product.model} - ${product.color}`;
+
     image.onerror = function () {
       this.onerror = null;
       this.src = product.alternateImage ||
@@ -200,7 +194,6 @@ function confirmProductSelection() {
   showToast("Added to bag ✓");
 }
 
-
 // =========================
 // CART
 // =========================
@@ -257,6 +250,7 @@ function loadCart() {
         quantity: Math.max(1, Number(item.quantity) || 1)
       };
     }).filter(Boolean);
+
   } catch (error) {
     cart = [];
     console.warn("Could not load cart:", error);
@@ -283,7 +277,6 @@ function changeQuantity(productId, change) {
   saveCart();
   updateCart();
 }
-
 
 // =========================
 // UPDATE CART DISPLAY
@@ -372,7 +365,6 @@ function updateCart() {
   if (checkoutTotal) checkoutTotal.textContent = money(total);
 }
 
-
 // =========================
 // CART PANEL
 // =========================
@@ -389,7 +381,6 @@ function closeCart() {
   document.getElementById("cart-panel").classList.remove("show");
   updateBodyScroll();
 }
-
 
 // =========================
 // CHECKOUT
@@ -418,7 +409,6 @@ function closeCheckout() {
   resetPlaceOrderButton();
 }
 
-
 // =========================
 // BODY SCROLL
 // =========================
@@ -430,7 +420,6 @@ function updateBodyScroll() {
 
   document.body.classList.toggle("no-scroll", Boolean(anyOpen));
 }
-
 
 // =========================
 // TOAST
@@ -450,7 +439,6 @@ function showToast(message) {
   }, 2200);
 }
 
-
 // =========================
 // PLACE ORDER BUTTON
 // =========================
@@ -463,6 +451,82 @@ function resetPlaceOrderButton() {
   button.innerHTML = 'Place order <span>↗</span>';
 }
 
+// =========================
+// SEND ORDER THROUGH HIDDEN IFRAME
+// =========================
+
+function sendOrderToGoogle(order) {
+  return new Promise((resolve, reject) => {
+    const requestId = "MIREL-" + Date.now() + "-" +
+      Math.random().toString(36).slice(2);
+
+    const iframe = document.createElement("iframe");
+    iframe.name = "mirel-order-" + requestId;
+    iframe.style.display = "none";
+    iframe.setAttribute("aria-hidden", "true");
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = SCRIPT_URL;
+    form.target = iframe.name;
+    form.style.display = "none";
+
+    const payload = document.createElement("input");
+    payload.type = "hidden";
+    payload.name = "payload";
+    payload.value = JSON.stringify({
+      ...order,
+      requestId
+    });
+
+    form.appendChild(payload);
+    document.body.append(iframe, form);
+
+    let finished = false;
+
+    const cleanup = () => {
+      window.removeEventListener("message", onMessage);
+      clearTimeout(timeout);
+      form.remove();
+      iframe.remove();
+    };
+
+    const finish = (callback, value) => {
+      if (finished) return;
+      finished = true;
+      cleanup();
+      callback(value);
+    };
+
+    const onMessage = event => {
+      if (event.source !== iframe.contentWindow) return;
+
+      const result = event.data;
+      if (!result || result.requestId !== requestId) return;
+
+      if (result.success) {
+        finish(resolve, result);
+      } else {
+        finish(reject, new Error(result.error || "Order was not saved."));
+      }
+    };
+
+    const timeout = setTimeout(() => {
+      finish(
+        reject,
+        new Error("No confirmation received from Google Sheets. Please check your connection and try again.")
+      );
+    }, 30000);
+
+    window.addEventListener("message", onMessage);
+
+    try {
+      form.submit();
+    } catch (error) {
+      finish(reject, error);
+    }
+  });
+}
 
 // =========================
 // PLACE ORDER
@@ -525,15 +589,13 @@ async function placeOrder(event) {
   orderSubmitting = true;
 
   const button = document.getElementById("place-order-button");
-  button.disabled = true;
-  button.textContent = "Sending order...";
+  if (button) {
+    button.disabled = true;
+    button.textContent = "Sending order...";
+  }
 
   try {
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      body: JSON.stringify(order)
-    });
+    await sendOrderToGoogle(order);
 
     cart = [];
     saveCart();
@@ -542,16 +604,17 @@ async function placeOrder(event) {
     form.reset();
     closeCheckout();
 
-    showToast("Order request sent. We'll contact you soon ♡");
+    showToast("Order confirmed ✓ We'll contact you soon!");
+
   } catch (error) {
-    console.error("Order request error:", error);
-    showToast("Could not send the order. Please try again.");
+    console.error("Order submission error:", error);
+    showToast("Order failed. Please try again.");
+
   } finally {
     orderSubmitting = false;
     resetPlaceOrderButton();
   }
 }
-
 
 // =========================
 // KEYBOARD
@@ -564,7 +627,6 @@ document.addEventListener("keydown", event => {
   closeCart();
   closeCheckout();
 });
-
 
 // =========================
 // INITIALIZE
